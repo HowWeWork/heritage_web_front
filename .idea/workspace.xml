@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e96547cf-663e-43e9-8176-fd3bda4ac56d" name="변경" comment="(HTML) ajax 타입 추가하여 Request 수정">
+    <list default="true" id="e96547cf-663e-43e9-8176-fd3bda4ac56d" name="변경" comment="(HTML) 글생성 기능 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/script.js" afterDir="false" />
     </list>
@@ -249,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646633289651</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="(HTML) 글생성 기능 완료">
+      <created>1646635783412</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1646635783412</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +282,8 @@
     <MESSAGE value="(HTML) GET/board URL 추가" />
     <MESSAGE value="(HTML) API규칙에 맞춰 Request 수정" />
     <MESSAGE value="(HTML) ajax 타입 추가하여 Request 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="(HTML) ajax 타입 추가하여 Request 수정" />
+    <MESSAGE value="(HTML) 글생성 기능 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="(HTML) 글생성 기능 완료" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/heritage$app.coverage" NAME="app 커버리지 결과" MODIFIED="1646611453614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend" />

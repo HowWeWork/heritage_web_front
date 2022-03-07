@@ -27,7 +27,7 @@ $(document).ready(function () {
                                                   <td>" ${comment} "</td>
                                                   <td>${likeCount}</td>
                                                   <td><button id="likeBtn" type="button" class="btn btn-outline-danger">Like</button></td>
-                                                  <td><button onclick="open_box()" id="editBtn" type="button" class="btn btn-outline-warning">Edit</button></td>
+                                                  <td><button onclick="passwordCheck()" id="editBtn" type="button" class="btn btn-outline-warning">Edit</button></td>
                                               </tr>
                                               <tr class="${userName}and${comment}">
                                                   <td colspan="7">
@@ -37,9 +37,7 @@ $(document).ready(function () {
                                                                 <div class="col-sm">
                                                                     <input id="inputUserName${userName}and${comment}" type="text" class="form-control" placeholder="userName" aria-label="userName">
                                                                 </div>
-                                                                <div class="col-sm">
-                                                                    <input id="inputPw${userName}and${comment}" type="text" class="form-control" placeholder="pw" aria-label="pw">
-                                                                </div>
+                                                             
                                                                 <div class="col-auto">
                                                                     <label class="visually-hidden" for="autoSizingSelect${userName}and${comment}">Preference</label>
                                                                     <select class="form-select" id="autoSizingSelect${userName}and${comment}">
@@ -126,9 +124,9 @@ $(document).ready(function () {
             type: 'PATCH',
             url: 'http://192.168.4.201:5000/board/${boardNum}',
             contentType: 'application/json;charset=utf-8',
-            data: { sector: sector, title: title, comment : comment },
+            data: JSON.stringify({sector: sector, title: title, comment : comment }),
             success: function (response) {
-                alert('글이 업데이트되었습니다.')
+                alert('글이 업데이트 되었습니다.')
                 window.location.reload()
             }
         });
@@ -139,9 +137,30 @@ $(document).ready(function () {
         $("#Box").show()
     }
 
+    // 비밀 번호 확인 창
+    function passwordCheck(){
+       var pwch = prompt("비밀번호");
+       if (pwch == 1234) {
+            alert("hi");
+        } else {
+            alert("wrong number");
+        }
+    }
+
+    $.ajax({
+        type: 'GET',
+        url: 'http://192.168.4.201:5000/board/{:boardNum}/check',
+        contentType: 'application/json;charset=utf-8',
+        data:  JSON.stringify({ pw : pw}),
+        success: function (response) {
+        //성공하면 오픈박스 열어줘, 서버에서 글 정보를 줬으니까
+            open_box()
+        }
+    })
+
+
     // 박스 열기
     function close_box(){
         $("#Box").hide()
     }
-
 

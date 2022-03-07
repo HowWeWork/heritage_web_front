@@ -7,7 +7,7 @@ $(document).ready(function () {
         $('#listBox').empty()
         $.ajax({
             type: 'GET',
-            url: 'http://192.168.4.201/board',
+            url: 'http://192.168.4.201:5000/board',
             data: {},
             success: function (response) {
                 let rows = response
@@ -70,7 +70,7 @@ $(document).ready(function () {
                     }
                 });
             }
-    //글 저장
+    //새 글 작성
     function saveList() {
         let userName = $('#inputUserName').val()
         let pw = $('#inputPw').val()
@@ -80,7 +80,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '/heritage',
+            url: 'http://192.168.4.201/board',
             data: {userName: userName, pw: pw, sector: sector, title: title, comment: comment},
             success: function (response) {
                 alert(response)

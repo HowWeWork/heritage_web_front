@@ -8,6 +8,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             url: 'http://192.168.4.201:5000/board',
+            contentType: 'application/json;charset=utf-8',
             data: {},
             success: function (response) {
                 let rows = response
@@ -76,15 +77,14 @@ $(document).ready(function () {
         let userName = $('#inputUserName').val()
         let pw = $('#inputPw').val()
         let sector = $('#autoSizingSelect').val()
-        let title = $('#inpuTitle').val()
+        let title = $('#inputTitle').val()
         let comment = $('#inputComment').val()
 
         $.ajax({
             type: 'POST',
             url: 'http://192.168.4.201:5000/board',
             contentType: 'application/json;charset=utf-8',
-            data: {userName: userName, pw: pw, sector: sector, title: title, comment: comment},
-            datatype : 'json',
+            data: JSON.stringify({userName : userName, pw : pw, sector : sector, title : title, comment:comment }),
 
             success: function (response) {
                 alert(response)
@@ -100,8 +100,9 @@ $(document).ready(function () {
         let comment = words[1]
 
         $.ajax({
-            type: 'POST',
+            type: 'DELETE',
             url: 'http://192.168.4.201:5000/board/{:boardNum}',
+            contentType: 'application/json;charset=utf-8',
             data: {},
             success: function (response) {
                 alert('글이 삭제되었습니다.')
@@ -122,8 +123,9 @@ $(document).ready(function () {
         let comment = $('#inputComment'+str).val()
 
         $.ajax({
-            type: 'POST',
-            url: 'http://192.168.4.201:5000/board/{:boardNum}',
+            type: 'PATCH',
+            url: 'http://192.168.4.201:5000/board/${boardNum}',
+            contentType: 'application/json;charset=utf-8',
             data: { sector: sector, title: title, comment : comment },
             success: function (response) {
                 alert('글이 업데이트되었습니다.')

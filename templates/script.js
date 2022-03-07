@@ -70,6 +70,7 @@ $(document).ready(function () {
                     }
                 });
             }
+
     //새 글 작성
     function saveList() {
         let userName = $('#inputUserName').val()
@@ -80,7 +81,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: 'http://192.168.4.201/board',
+            url: 'http://192.168.4.201:5000/board',
             data: {userName: userName, pw: pw, sector: sector, title: title, comment: comment},
             success: function (response) {
                 alert(response)
@@ -97,8 +98,8 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '/delete',
-            data: {userName_give: userName, comment_give: comment},
+            url: 'http://192.168.4.201:5000/board/{:boardNum}',
+            data: {},
             success: function (response) {
                 alert('글이 삭제되었습니다.')
                 window.location.reload()
@@ -106,7 +107,7 @@ $(document).ready(function () {
         });
     }
 
-     // 글 수정
+    // 글 수정
     function updateList(str) {
         let words = str.split('and');
         let ID_origin = words[0]
@@ -119,8 +120,8 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '/update',
-            data: { ID_origin: ID_origin, comment_origin: comment_origin, userName: userName, pw:pw, sector: sector, title: title, comment : comment },
+            url: 'http://192.168.4.201:5000/board/{:boardNum}',
+            data: { sector: sector, title: title, comment : comment },
             success: function (response) {
                 alert('글이 업데이트되었습니다.')
                 window.location.reload()
@@ -132,6 +133,7 @@ $(document).ready(function () {
     function open_box(){
         $("#Box").show()
     }
+
     // 박스 열기
     function close_box(){
         $("#Box").hide()

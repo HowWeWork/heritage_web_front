@@ -82,7 +82,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: 'http://192.168.4.201:5000/board',
-            contentType: 'application/json',
+            contentType: 'application/json;charset=utf-8',
             data: {userName: userName, pw: pw, sector: sector, title: title, comment: comment},
             datatype : 'json',
 

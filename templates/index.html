@@ -2,12 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Serif+KR:wght@300&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href = "style.css">
+    <script src="./script.js"></script>
+
     <title>Heritage</title>
 </head>
+
 <body>
+    <div class="headBox"></div>
+    <div class="logoBox">
+        <p>
+        <h1><B> Heritage </B></h1>
+        <h5> 내 취향이 모두의 문화가 되는 곳</h5>
+        </p>
+    </div>
+    <div class="inputBox">
+        <div class="row g-4">
+            <div class="wrap">
+                <div class="col-sm">
+                    <input id="inputUserName" type="text" class="form-control" placeholder="name" aria-label="userName">
+                </div>
+                <div class="col-sm">
+                    <input id="inputPw" type="text" class="form-control" placeholder="pw" aria-label="pw">
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                        <option selected>Sector</option>
+                        <option value="영화">영화</option>
+                        <option value="TV">TV</option>
+                        <option value="책">책</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                    <input id="inputTitle" type="text" class="form-control" placeholder="title" aria-label="title">
+                </div>
+            </div>
+            <div class="wrap2">
+                <input id="inputComment" type="text" class="form-control" placeholder="comment" aria-label="comment">
+            </div>
+        </div>
+        <div class="boardCreateBtn">
+            <div class="col-auto">
+                <button onclick="saveList()" class="btn btn-light" type="button">글쓰기</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="bestBoardsList">
+        <div class="bestBoardOne">
+            <div class="card" style="width: 100rem;">
+                <div class="ranking">
+                    <B>🥇1위</B>
+                    <B>365회</B>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">해리포터와 비밀의 방</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">영화</h6>
+                    <p class="card-text">" 윙가르디움 레비오~싸" </p>
+                    <p class="card-text">From 헤르미온면</p>
+                    <!--                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">-->
+                    <!--                      <button onclick="likeBtn" type="button" class="btn btn-danger">좋아요</button>-->
+                    <!--                      <button onclick="editBtn" type="button" class="btn btn-warning">수정하기</button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="bestBoardOne">
+            <div class="card" style="width: 100rem;">
+                <div class="ranking">
+                    <B>🥈2위</B>
+                    <B>365회</B>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">해리포터와 비밀의 방</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">영화</h6>
+                    <p class="card-text">" 윙가르디움 레비오~싸" </p>
+                    <p class="card-text">From 헤르미온면</p>
+                    <!--                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">-->
+                    <!--                      <button type="button" class="btn btn-danger">좋아요</button>-->
+                    <!--                      <button type="button" class="btn btn-warning">수정하기</button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="bestBoardOne">
+            <div class="card" style="width: 100rem;">
+                <div class="ranking">
+                    <B>🥉3위</B>
+                    <B>365회</B>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">해리포터와 비밀의 방</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">영화</h6>
+                    <p class="card-text">" 윙가르디움 레비오~싸" </p>
+                    <p class="card-text">From 헤르미온면</p>
+                    <!--                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">-->
+                    <!--                      <button type="button" class="btn btn-danger">좋아요</button>-->
+                    <!--                      <button type="button" class="btn btn-warning">수정하기</button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="boardsList">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Sector</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">Like</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody id="listBox">
+
+            </tbody>
+        </table>
+    </div>
 
 </body>
+
 </html>

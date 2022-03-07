@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e96547cf-663e-43e9-8176-fd3bda4ac56d" name="변경" comment="(1차) 변수명 조정 전//최신">
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    <list default="true" id="e96547cf-663e-43e9-8176-fd3bda4ac56d" name="변경" comment="(HTML) ajax 타입 추가하여 Request 수정">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
     <envs>
@@ -68,7 +77,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\daunjeong\dev\heritage\templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -164,7 +179,77 @@
       <option name="project" value="LOCAL" />
       <updated>1646613991220</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="(HTML) 파일분리">
+      <created>1646619938343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646619938343</updated>
+    </task>
+    <task id="LOCAL-00005" summary="(HTML) Id-&gt; userName , 소문자로 변수명통일">
+      <created>1646630066022</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646630066022</updated>
+    </task>
+    <task id="LOCAL-00006" summary="(HTML) Id-&gt; userName , 소문자로 변수명통일">
+      <created>1646630122321</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646630122321</updated>
+    </task>
+    <task id="LOCAL-00007" summary="(HTML) Id-&gt; userName , 소문자로 변수명통일">
+      <created>1646630149090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646630149090</updated>
+    </task>
+    <task id="LOCAL-00008" summary="(HTML) html, css, js 변수명 통일">
+      <created>1646631865052</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646631865052</updated>
+    </task>
+    <task id="LOCAL-00009" summary="(HTML) GET/board URL 추가">
+      <created>1646632093002</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1646632093002</updated>
+    </task>
+    <task id="LOCAL-00010" summary="(HTML) API규칙에 맞춰 Request 수정">
+      <created>1646632771584</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1646632771584</updated>
+    </task>
+    <task id="LOCAL-00011" summary="(HTML) ajax 타입 추가하여 Request 수정">
+      <created>1646633186683</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646633186683</updated>
+    </task>
+    <task id="LOCAL-00012" summary="(HTML) ajax 타입 추가하여 Request 수정">
+      <created>1646633283902</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1646633283902</updated>
+    </task>
+    <task id="LOCAL-00013" summary="(HTML) ajax 타입 추가하여 Request 수정">
+      <created>1646633289651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1646633289651</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +269,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(1차) 변수명 조정 전" />
     <MESSAGE value="(1차) 변수명 조정 전//최신" />
-    <option name="LAST_COMMIT_MESSAGE" value="(1차) 변수명 조정 전//최신" />
+    <MESSAGE value="(HTML) 파일분리" />
+    <MESSAGE value="(HTML) Id-&gt; userName , 소문자로 변수명통일" />
+    <MESSAGE value="(HTML) html, css, js 변수명 통일" />
+    <MESSAGE value="(HTML) GET/board URL 추가" />
+    <MESSAGE value="(HTML) API규칙에 맞춰 Request 수정" />
+    <MESSAGE value="(HTML) ajax 타입 추가하여 Request 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="(HTML) ajax 타입 추가하여 Request 수정" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/heritage$app.coverage" NAME="app 커버리지 결과" MODIFIED="1646611453614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/frontend" />

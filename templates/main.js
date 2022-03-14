@@ -60,7 +60,7 @@ function showList() {
                                             <label class="visually-hidden" for="autoSizingSelect${boardNum}">Preference</label>
                                             <select class="form-select" id="autoSizingSelect${boardNum}">
                                                 <option>Sector</option>
-                                                <option value="영화">영화</option>
+                                                <option value="영화" selected>영화</option>
                                                 <option value="TV">TV</option>
                                                 <option value="책">책</option>
                                                 <option value="다큐">다큐</option>
@@ -117,11 +117,11 @@ function saveList() {
     });
 }
 
-//버튼에 기능붙이기
+//박스열기
 function open_box(num){
     $("#Box" + num).show()
 }
-
+//박스닫기
 function close_box(num){
     $("#Box"+ num).hide()
 }
@@ -190,9 +190,6 @@ function likeClick(boardNum) {
 }
 
 
-
-
-
 //bestBoardList 보여주기
 function bestBoardList(){
       
@@ -231,10 +228,10 @@ function bestBoardList(){
             
                 <div class="${boardNum}and${likeCount}">
 
-                    <div class="card" style="width: 10rem;">
+                    <div class="card" style="width: 20rem;">
                         <div class="ranking">
-                            <B>🥇${i+1}위</B>
-                            <B>좋아요${likeCount}회</B>
+                            <B> 🥇 ${i+1}위</B>
+                            <B><i> 좋아요 ${likeCount} 회</i></B>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">${title}</h5>

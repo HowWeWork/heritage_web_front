@@ -82,6 +82,7 @@ function showList() {
                                     <div class="col-auto">
                                         <button onclick="updateList(${boardNum},${pw})" id="boardUpdateBtn" class="btn btn-light"  type="button">수정하기</button>
                                         <button onclick="deleteList(${boardNum},${pw})" id="boardDeleteBtn" class="btn btn-light"  type="button">삭제하기</button>
+                                        <button onclick="close_box(${boardNum})" id="boardDeleteBtn" class="btn btn-light"  type="button">닫기</button>
                                     </div>
                                 </div>
                             </div>
@@ -125,6 +126,9 @@ function open_box(num){
 function close_box(num){
     $("#Box"+ num).hide()
 }
+
+
+
 
 // 글 수정
 function updateList(num, pw) {
@@ -229,12 +233,12 @@ function bestBoardList(){
             
             let temp_best=`
             
-                <div class="${boardNum}and${likeCount}">
+                <div class=" ${boardNum}and${likeCount}">
 
-                    <div class="card" style="width: 10rem;">
+                    <div class="card" style="width: 20rem;">
                         <div class="ranking">
                             <B>🥇${i+1}위</B>
-                            <B>좋아요${likeCount}회</B>
+                            <B><i> 좋아요 ${likeCount} 회</i></B>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">${title}</h5>

@@ -59,12 +59,16 @@ function showList() {
                                             <label class="visually-hidden" for="autoSizingSelect${boardNum}">Preference</label>
                                             <select class="form-select" id="autoSizingSelect${boardNum}">
                                                 <option class="origin_selected">${sector}</option>
-                                                <option value="영화">영화</option>
-                                                <option value="TV">TV</option>
                                                 <option value="책">책</option>
+                                                <option value="영화">영화</option>
+                                                <option value="드라마">드라마</option>
                                                 <option value="다큐">다큐</option>
                                                 <option value="음악">음악</option>
                                                 <option value="미술">미술</option>
+                                                <option value="음식">음식</option>
+                                                <option value="운동">운동</option>
+                                                <option value="공연">공연</option>
+                                                <option value="etc">etc</option>
                                             </select>
                                         </div>
 
@@ -235,7 +239,7 @@ function bestBoardList() {
 
                         <div class="card">
                             <div class="card_ranking">
-                                <B>🌟${i + 1}위</B>
+                                <B>💕${i + 1}위</B>
                                 <p> 좋아요 ${likeCount} 회</p>
                             </div>
                             <div class="card_title">

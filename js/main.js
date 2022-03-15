@@ -107,6 +107,37 @@ function saveList() {
     let title = $('#inputTitle').val()
     let comment = $('#inputComment').val()
 
+
+    if (userName == 0 || userName == null) {
+        alert("이름을 작성해주세요.");
+        $('#inputUserName').focus();
+        return;
+    }
+
+    if (pw == 0 || pw == null) {
+        alert("패스워드를 작성해주세요.");
+        $('#inputPw').focus();
+        return;
+    }
+
+    if (sector == "Sector" || sector == null) {
+        alert("분야를 선택해주세요.");
+        $('#autoSizingSelect').focus()
+        return;
+    }
+
+    if (title == 0 || title == null) {
+        alert("제목 작성해주세요.");
+        $('#inputTitle').focus();
+        return;
+    }
+
+    if (comment == 0 || comment == null) {
+        alert("한줄평을 작성해주세요.");
+        $('#inputComment').focus();
+        return;
+    }
+
     $.ajax({
         type: 'POST',
         url: 'http://heritage-env-1.eba-dvm4baup.ap-northeast-2.elasticbeanstalk.com/board/',
@@ -117,7 +148,7 @@ function saveList() {
         success: function (response) {
             alert("글이 작성되었습니다")
             window.location.reload()
-        }
+        },
     });
 }
 

@@ -1,13 +1,13 @@
 $(document).ready(function () {
     bestBoardList();
     showList();
-    
+
 });
 
 //로딩 후 전체 글 조회
 
 function showList() {
-    
+
     $('#listBox').empty()
 
     $.ajax({
@@ -21,7 +21,7 @@ function showList() {
 
             let rows = response
 
-            for (let i=0; i<rows.length; i++){
+            for (let i = 0; i < rows.length; i++) {
                 let boardNum = rows[i]['boardNum']
                 let userName = rows[i]['userName']
                 let pw = rows[i]['pw']
@@ -29,24 +29,23 @@ function showList() {
                 let title = rows[i]['title']
                 let comment = rows[i]['comment']
                 let likeCount = rows[i]['likeCount']
-                            
+
                 let temp_html = `
 
-                    <tr class="${userName}and${comment}">
+                    <tr class="content" id="${boardNum}">
 
-                        <td>${userName}</td>
-                        <td>${sector}</td>
-                        <td>${title}</td>
-                        <td>" ${comment} "</td>
-                        <td>${likeCount}</td>
+                        <td><p>${userName}</p></td>
+                        <td><p>${sector}</p></td>
+                        <td><p>${title}</p></td>
+                        <td><p>" ${comment} "</p></td>
                         
-                        <td><button id="likeBtn" onclick="likeClick(${boardNum})"  type="button" class="btn btn-outline-danger"> Like </button></td>
+                        <td class="likeBtn_td"><button id="likeBtn" onclick="likeClick(${boardNum})"  type="button" class="btn btn-outline-danger"> <i class="fa-regular fa-thumbs-up"></i> ${likeCount}</button></td>
 
-                        <td><button id="editBtn" onclick="open_box(${boardNum})"  type="button" class="btn btn-outline-warning"> Edit </button></td>
+                        <td class="editBtn_td"><button id="editBtn" onclick="open_box(${boardNum})"  type="button" class="btn btn-outline-warning"> Edit </button></td>
                         
                     </tr>
 
-                    <tr class="${boardNum}">
+                    <tr class="${boardNum}" id="underLine">
                         <td colspan="7">
 
                             <div class="editBox" id="Box${boardNum}">
@@ -59,7 +58,7 @@ function showList() {
                                         <div class="col-auto">
                                             <label class="visually-hidden" for="autoSizingSelect${boardNum}">Preference</label>
                                             <select class="form-select" id="autoSizingSelect${boardNum}">
-                                                <option>Sector</option>
+                                                <option class="origin_selected">${sector}</option>
                                                 <option value="영화">영화</option>
                                                 <option value="TV">TV</option>
                                                 <option value="책">책</option>
@@ -88,12 +87,12 @@ function showList() {
                             </div>
                         </td>
                     </tr>`
-                    
+
                 $('#listBox').append(temp_html)
 
-            } 
-        } 
-    }); 
+            }
+        }
+    });
 }
 
 //새 글 작성
@@ -119,12 +118,12 @@ function saveList() {
 }
 
 //버튼에 기능붙이기
-function open_box(num){
+function open_box(num) {
     $("#Box" + num).show()
 }
 
-function close_box(num){
-    $("#Box"+ num).hide()
+function close_box(num) {
+    $("#Box" + num).hide()
 }
 
 
@@ -198,14 +197,14 @@ function likeClick(boardNum) {
 
 
 //bestBoardList 보여주기
-function bestBoardList(){
-      
+function bestBoardList() {
+
     $.ajax({
-		url: 'http://heritage-env-1.eba-dvm4baup.ap-northeast-2.elasticbeanstalk.com/board/best',
-		type: 'GET',
-        async:false,
+        url: 'http://heritage-env-1.eba-dvm4baup.ap-northeast-2.elasticbeanstalk.com/board/best',
+        type: 'GET',
+        async: false,
         contentType: 'application/json;charset=utf-8',
-		data: {},
+        data: {},
 
         // data : {
         //        boardNum: 3
@@ -218,45 +217,49 @@ function bestBoardList(){
         //        writeDate: "2022-03-
         //}
 
-		success: function bestBoardCreate(response) {          
-            
-           let rows = response
+        success: function bestBoardCreate(response) {
 
-           for(let i=0; i<rows.length; i++){
-            let boardNum = rows[i]['boardNum']
-            let comment = rows[i]['comment']
-            let likeCount = rows[i]['likeCount']
-            let pw = rows[i]['pw']
-            let sector = rows[i]['sector']
-            let title = rows[i]['title']
-            let userName = rows[i]['userName']
-            
-            let temp_best=`
-            
-                <div class=" ${boardNum}and${likeCount}">
+            let rows = response
 
-                    <div class="card" style="width: 20rem;">
-                        <div class="ranking">
-                            <B>🥇${i+1}위</B>
-                            <B><i> 좋아요 ${likeCount} 회</i></B>
+            for (let i = 0; i < rows.length; i++) {
+                let boardNum = rows[i]['boardNum']
+                let comment = rows[i]['comment']
+                let likeCount = rows[i]['likeCount']
+                let pw = rows[i]['pw']
+                let sector = rows[i]['sector']
+                let title = rows[i]['title']
+                let userName = rows[i]['userName']
+                let temp_best = `
+
+                    <div class="best_content">
+
+                        <div class="card">
+                            <div class="card_ranking">
+                                <B>🌟${i + 1}위</B>
+                                <p> 좋아요 ${likeCount} 회</p>
+                            </div>
+                            <div class="card_title">
+                                <h2 class="card-title">${title}</h2>
+                            </div>
+                            <div class="card_sector">
+                                <h6 class="card-subtitle mb-2 text-muted">${sector}</h6>
+                            </div>
+                            <div class="card_comment">
+                                <p class="card-text">" ${comment} " </p>
+                            </div>
+                            <div class="card_userName">
+                                <p class="card-text">From ${userName}</p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">${title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">${sector}</h6>
-                            <p class="card-text">" ${comment} " </p>
-                            <p class="card-text">From ${userName}</p>
-                        
-                        </div>
-                    </div>
-                </div>`
+                    </div>`
 
                 $('#best3').append(temp_best)
-                                    
-           }
-    
-  		}
+
+            }
+
+        }
     });
-      
+
 }
 
 

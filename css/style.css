@@ -1,0 +1,363 @@
+/* 초기 설정 */
+h1,h2,h3,h4,h5,h6,p,b,title {
+  font-family: "Noto Serif KR", serif;
+}
+
+
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size : 20px;
+}
+
+h3 {
+  font-size : 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Noto Serif KR", serif;
+  
+}
+
+body {
+  position: relative;
+}
+
+/* Header */
+
+.section {
+  min-width: 1200px;
+  margin-bottom: 12px;
+}
+
+.section .inner {
+  display: flex;
+}
+
+.logoBox {
+  width : 50%;
+  height: 100px;
+  background-color: white;
+}
+
+.searchBox {
+  width: 50%;
+  position: relative;
+}
+
+.searchBoxPack {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.logoBox .logoTitle {
+  display: flex;
+  margin : 24px 0 20px 0;
+}
+.logoBox img {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.logoBox .title {
+  display: block;
+}
+
+.logoBox .sub_title {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* best 글 */
+.bestBoards_block {
+  background-color: #e9dada;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.bestBoards_block .bestBoardsList {
+  width: 100%;
+  height: 350px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bestBoards_block .bestBoardsList .best_content {
+  width: 100%;
+  margin-right: 10px;
+  height: 250px;
+  border-radius: 20px;
+  padding: 12px;
+  background-color: #FFF;
+  box-shadow: 0px 3px 5px 0px gray;
+}
+
+.best_content .card  {
+  width: 100%;
+  height: 100%;
+  border:none;
+  font-family: "Noto Serif KR", serif;
+}
+
+.card_ranking {
+  margin-bottom: 10px;
+}
+
+.card_ranking B {
+  font-size: 26px;
+}
+
+.card_ranking p {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.card .best_ico {
+  background: url("https://cdn-icons-png.flaticon.com/512/179/179352.png");
+  background-size: cover;
+  background-position: center;
+  width:30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.card_title {
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-bottom: 1px #dad8d8 solid;
+}
+
+.card_sector {
+  padding-left: 10px;
+  margin-bottom: 12px;
+  
+}
+
+.card_comment {
+  text-align: center;
+  padding: 0 10px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  margin-bottom: 25px;
+}
+
+.card_userName {
+  padding: 10px 15px;
+  text-align: right;
+
+}
+
+/* 글쓰기 */
+
+.inputBox {
+  max-width: 1500px;
+  height: 160px;
+  background: #dad8d8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 30px;
+
+  box-shadow: 0px 3px 5px 0px gray;
+}
+
+.boardCreateBtn {
+  margin : 10px 0;
+}
+
+.wrap {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+.wrap2 {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+/* 수정 박스 */
+
+.editBox {
+  max-width: 1500px;
+  width: 95%;
+  height: 170px;
+  background: #dad8d8;
+
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0px 3px 5px 0px gray;
+
+  display: none;
+}
+
+.editBoxBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.boardsList {
+  min-width: fit-content;
+  width: 100%;
+  height: fit-content;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.boardsList .table .col_tr {
+  border-bottom: 2px solid #dad8d8;
+}
+
+.boardsList .table .col_tr th{
+  font-weight: 700;
+}
+
+.boardsList .table .col_tr th:nth-child(1){
+  width:100px;
+}
+
+.boardsList .table .col_tr th:nth-child(2){
+  width:80px;
+}
+
+.boardsList .table .col_tr th:nth-child(3){
+  width : 160px;
+}
+
+.content td {
+  line-height: 1.3;
+  padding: 0px;
+}
+
+.content .editBtn_td, .likeBtn_td {
+  width: 80px;
+}
+
+.content button {
+  width: 70px;
+  margin-top: 20px;
+  float: right;
+}
+
+#underLine {
+  border-bottom: 1px solid #dad8d8;
+}
+
+.bestBoardOne {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.inputUserName {
+  width: 100%;
+}
+
+.inputPw {
+  width: 100%;
+}
+
+.inputSector {
+  width: 100%;
+}
+
+.inputTitle {
+  width: 100%;
+}
+
+.origin_selected {
+  background-color: #dad8d8;
+}
+
+/* footer */
+
+#footer {
+  padding: 6em 0 4em 0 ;
+  background-color: #1d242a;
+  text-align: center;
+}
+
+  #footer .icons {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+  }
+
+    #footer .icons a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+      #footer .icons a:hover {
+        color: #fff;
+      }
+
+  #footer .copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    letter-spacing: 0.225em;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+    #footer .copyright li {
+      border-left: solid 1px rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      line-height: 1em;
+      margin-left: 1em;
+      padding-left: 1em;
+    }
+
+      #footer .copyright li:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      #footer .copyright li a {
+        color: inherit;
+      }
+
+        #footer .copyright li a:hover {
+          color: #fff;
+        }

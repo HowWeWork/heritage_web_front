@@ -80,8 +80,8 @@ function showList() {
                                 </div>
                                 <div class="editBoxBtn" id="boxBtn">
                                     <div class="col-auto">
-                                        <button onclick="updateList(${boardNum},${pw})" id="boardUpdateBtn" class="btn btn-light"  type="button">수정하기</button>
-                                        <button onclick="deleteList(${boardNum},${pw})" id="boardDeleteBtn" class="btn btn-light"  type="button">삭제하기</button>
+                                        <button onclick="updateList(${boardNum},\'${pw}\')" id="boardUpdateBtn" class="btn btn-light"  type="button">수정하기</button>
+                                        <button onclick="deleteList(${boardNum},\'${pw}\')" id="boardDeleteBtn" class="btn btn-light"  type="button">삭제하기</button>
                                     </div>
                                 </div>
                             </div>

@@ -43,82 +43,83 @@
             </div>
         </div>
         </content>
+    </div>
 
-        <div class="inner">
-            <div class="inputBox">
-                <div class="row g-4">
-                    <div class="wrap">
-                        <div class="col-sm">
-                            <input id="inputUserName" type="text" class="form-control" placeholder="이름"
-                                aria-label="userName">
-                        </div>
-                        <div class="col-sm">
-                            <input id="inputPw" type="text" class="form-control" placeholder="비밀번호" aria-label="비밀번호">
-                        </div>
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                            <select class="form-select" id="autoSizingSelect">
-                                <option value="Sector">분야</option>
-                                <option value="책">책</option>
-                                <option value="영화">영화</option>
-                                <option value="드라마">드라마</option>
-                                <option value="다큐">다큐</option>
-                                <option value="음악">음악</option>
-                                <option value="미술">미술</option>
-                                <option value="음식">음식</option>
-                                <option value="운동">운동</option>
-                                <option value="공연">공연</option>
-                                <option value="etc">etc</option>
-                            </select>
-                        </div>
-                        <div class="col-sm">
-                            <input id="inputTitle" type="text" class="form-control" placeholder="제목" aria-label="title">
-                        </div>
+    <div class="inner">
+        <div class="inputBox">
+            <div class="row g-4">
+                <div class="wrap">
+                    <div class="col-sm">
+                        <input id="inputUserName" type="text" class="form-control" placeholder="이름"
+                            aria-label="userName">
                     </div>
-                    <div class="wrap2">
-                        <input id="inputComment" type="text" class="form-control" placeholder="한줄평 작성하기"
-                            aria-label="comment">
+                    <div class="col-sm">
+                        <input id="inputPw" type="text" class="form-control" placeholder="비밀번호" aria-label="비밀번호">
                     </div>
-                </div>
-                <div class="boardCreateBtn">
                     <div class="col-auto">
-                        <button onclick="saveList()" class="btn btn-light" type="button">글쓰기</button>
+                        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option value="Sector">분야</option>
+                            <option value="책">책</option>
+                            <option value="영화">영화</option>
+                            <option value="드라마">드라마</option>
+                            <option value="다큐">다큐</option>
+                            <option value="음악">음악</option>
+                            <option value="미술">미술</option>
+                            <option value="음식">음식</option>
+                            <option value="운동">운동</option>
+                            <option value="공연">공연</option>
+                            <option value="etc">etc</option>
+                        </select>
                     </div>
+                    <div class="col-sm">
+                        <input id="inputTitle" type="text" class="form-control" placeholder="제목" aria-label="title">
+                    </div>
+                </div>
+                <div class="wrap2">
+                    <input id="inputComment" type="text" class="form-control" placeholder="한줄평 작성하기"
+                        aria-label="comment">
+                </div>
+            </div>
+            <div class="boardCreateBtn">
+                <div class="col-auto">
+                    <button onclick="saveList()" class="btn btn-light" type="button">글쓰기</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="inner">
-            <div class="boardsList">
-                <table class="table">
-                    <thead>
-                        <tr class="col_tr">
-                            <th scope="col">
-                                <h3>이름</h3>
-                            </th>
-                            <th scope="col">
-                                <h3>분류</h3>
-                            </th>
-                            <th scope="col">
-                                <h3>제목</h3>
-                            </th>
-                            <th scope="col">
-                                <h3>한줄평</h3>
-                            </th>
-                            <th scope="col">
-                                <h3></h3>
-                            </th>
-                            <th scope="col">
-                                <h3></h3>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody id="listBox">
+    <div class="inner">
+        <div class="boardsList">
+            <table class="table">
+                <thead>
+                    <tr class="col_tr">
+                        <th scope="col">
+                            <h3>이름</h3>
+                        </th>
+                        <th scope="col">
+                            <h3>분류</h3>
+                        </th>
+                        <th scope="col">
+                            <h3>제목</h3>
+                        </th>
+                        <th scope="col">
+                            <h3>한줄평</h3>
+                        </th>
+                        <th scope="col">
+                            <h3></h3>
+                        </th>
+                        <th scope="col">
+                            <h3></h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="listBox">
 
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
+    </div>
 </body>
 <footer id="footer">
     <ul class="icons">

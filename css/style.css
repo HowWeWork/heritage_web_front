@@ -1,9 +1,15 @@
 /* 초기 설정 */
-h1,h2,h3,h4,h5,h6,p,b,title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+title {
   font-family: "Noto Serif KR", serif;
 }
-
-
 
 h1 {
   font-size: 36px;
@@ -11,11 +17,11 @@ h1 {
 }
 
 h2 {
-  font-size : 20px;
+  font-size: 20px;
 }
 
 h3 {
-  font-size : 18px;
+  font-size: 18px;
 }
 
 p {
@@ -29,18 +35,15 @@ p {
 
 * {
   font-family: "Noto Serif KR", serif;
-  
 }
 
 body {
   position: relative;
 }
 
-
 /* Header */
 
 .section {
-  width: 1200px;
   margin-bottom: 12px;
 }
 
@@ -49,7 +52,7 @@ body {
 }
 
 .logoBox {
-  width : 50%;
+  width: 50%;
   height: 100px;
   background-color: white;
 }
@@ -67,7 +70,7 @@ body {
 
 .logoBox .logoTitle {
   display: flex;
-  margin : 24px 0 20px 0;
+  margin: 24px 0 20px 0;
 }
 .logoBox img {
   margin-right: 10px;
@@ -106,21 +109,22 @@ body {
 }
 
 .bestBoards_block .bestBoardsList .best_content {
-  width: calc(100%/3);
+  width: calc(100% / 3);
+  min-width: 250px;
   margin-right: 10px;
   height: 300px;
   border-radius: 20px;
   padding: 12px;
-  background-color: #FFF;
-  position:relative;
+  background-color: #fff;
+  position: relative;
   box-shadow: 0px 3px 5px 0px gray;
 }
 
-.best_content .card  {
+.best_content .card {
   width: 100%;
   min-height: 250px;
   height: fit-content;
-  border:none;
+  border: none;
   font-family: "Noto Serif KR", serif;
 }
 
@@ -145,7 +149,7 @@ body {
   background: url("https://cdn-icons-png.flaticon.com/512/179/179352.png");
   background-size: cover;
   background-position: center;
-  width:30px;
+  width: 30px;
   height: 30px;
   display: inline-block;
 }
@@ -162,7 +166,6 @@ body {
 .card_sector {
   padding-left: 10px;
   margin-bottom: 12px;
-  
 }
 
 .card_comment {
@@ -202,7 +205,7 @@ body {
 }
 
 .boardCreateBtn {
-  margin : 10px 0;
+  margin: 10px 0;
 }
 
 .wrap {
@@ -260,20 +263,20 @@ body {
   border-bottom: 2px solid #dad8d8;
 }
 
-.boardsList .table .col_tr th{
+.boardsList .table .col_tr th {
   font-weight: 700;
 }
 
-.boardsList .table .col_tr th:nth-child(1){
-  width:100px;
+.boardsList .table .col_tr th:nth-child(1) {
+  width: 100px;
 }
 
-.boardsList .table .col_tr th:nth-child(2){
-  width:80px;
+.boardsList .table .col_tr th:nth-child(2) {
+  width: 80px;
 }
 
-.boardsList .table .col_tr th:nth-child(3){
-  width : 160px;
+.boardsList .table .col_tr th:nth-child(3) {
+  width: 160px;
 }
 
 .content td {
@@ -281,7 +284,8 @@ body {
   padding: 0px;
 }
 
-.content .editBtn_td, .likeBtn_td {
+.content .editBtn_td,
+.likeBtn_td {
   width: 80px;
 }
 
@@ -330,51 +334,51 @@ body {
 /* footer */
 
 #footer {
-  padding: 6em 0 4em 0 ;
+  padding: 6em 0 4em 0;
   background-color: #1d242a;
   text-align: center;
 }
 
-  #footer .icons {
-    font-size: 1.3em;
-    margin-bottom: 25px;
-  }
+#footer .icons {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+}
 
-    #footer .icons a {
-      color: rgba(255, 255, 255, 0.5);
-    }
+#footer .icons a {
+  color: rgba(255, 255, 255, 0.5);
+}
 
-      #footer .icons a:hover {
-        color: #fff;
-      }
+#footer .icons a:hover {
+  color: #fff;
+}
 
-  #footer .copyright {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1em;
-    letter-spacing: 0.225em;
-    list-style: none;
-    padding: 0;
-    text-transform: uppercase;
-  }
+#footer .copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1em;
+  letter-spacing: 0.225em;
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+}
 
-    #footer .copyright li {
-      border-left: solid 1px rgba(255, 255, 255, 0.5);
-      display: inline-block;
-      line-height: 1em;
-      margin-left: 1em;
-      padding-left: 1em;
-    }
+#footer .copyright li {
+  border-left: solid 1px rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  line-height: 1em;
+  margin-left: 1em;
+  padding-left: 1em;
+}
 
-      #footer .copyright li:first-child {
-        border-left: 0;
-        margin-left: 0;
-        padding-left: 0;
-      }
+#footer .copyright li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-      #footer .copyright li a {
-        color: inherit;
-      }
+#footer .copyright li a {
+  color: inherit;
+}
 
-        #footer .copyright li a:hover {
-          color: #fff;
-        }
+#footer .copyright li a:hover {
+  color: #fff;
+}
